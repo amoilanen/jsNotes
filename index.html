@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" data-framework="backbonejs">
+	<head>
+		<meta charset="utf-8">
+		<title>Notes</title>
+		<link rel="stylesheet" href="styles/style.css">
+	</head>
+	<body>
+		<div id="notes-container">
+		</div>
+
+		<script type="text/template" id="note-template">
+			<div class="note-controls">
+				<button class="note-delete">x</button>
+			</div>
+			<div class="note-title"><%- title %></div>
+			<div class="note-contents"><%- contents %></div>
+		</script>
+		<!--
+		<script src="lib/todomvc-common/base.js"></script>
+		-->
+		<script src="lib/jquery/jquery.js"></script>
+		<script src="lib/underscore/underscore.js"></script>
+		<script src="lib/backbone/backbone.js"></script>
+		<script src="lib/backbone.localStorage/backbone.localStorage.js"></script>
+		<script src="js/models/note.js"></script>
+		<script src="js/collections/notes.js"></script>
+		<script src="js/views/note.js"></script>
+		<script src="js/views/app.js"></script>
+		<script src="js/routers/router.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>

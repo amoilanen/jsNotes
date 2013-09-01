@@ -1,0 +1,26 @@
+- Notes can be added with a click, each note has the same text and size, position is not customizable
+  -- Notes are laid out properly on the screen
+  DONE
+  -- Notes are persisted and on reopening the page the existing notes are shown
+  DONE
+- Notes can be removed (by clicking on the "x" symbol)
+DONE
+- Text in notes can be customized (becomes editable on clicking on each note)
+DONE
+- Note is created at the point of click and has absolute coordinates
+DONE
+- Size of notes can be changed by dragging the corner of a note
+DONE
+- Notes can be moved around the screen
+DONE
+- The activated note gets the highest z-order, notes can overlap
+	-- Issue: when clicking on a note, it should come to the forefront
+DONE
+
+-- Issue: after resizing a note and saving it there appear <br> from somewhere
+
+- Color of notes can be customized
+- Font of notes can be customized
+
+- Support exporting notes to some common format, for example, text
+- Add tests for the app
