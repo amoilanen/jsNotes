@@ -2,7 +2,7 @@ var app = app || {};
 
 (function () {
 	'use strict';
-
+	
 	app.Note = Backbone.Model.extend({
 		defaults: {
 			title: '',
@@ -11,7 +11,8 @@ var app = app || {};
 			top: 0,
 			width: 150,
 			height: 150,
-			zIndex: 0
+			zIndex: 0,
+			backgroundColor: '#FFE032'
 		},
 	});
 })();

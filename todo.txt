@@ -16,8 +16,8 @@ DONE
 - The activated note gets the highest z-order, notes can overlap
 	-- Issue: when clicking on a note, it should come to the forefront
 DONE
-
 -- Issue: after resizing a note and saving it there appear <br> from somewhere
+DONE
 
 - Color of notes can be customized
 - Font of notes can be customized

@@ -29,7 +29,7 @@ var app = app || {};
 		},
 		
 		render: function () {
-			this.$el.html(this.template(this.model.toJSON()));
+			this.$el.html(Util.unencodeHTML(this.template(this.model.toJSON())));
 			this.$el.addClass("note");
 
 			this.$el.attr("draggable", "true");
@@ -51,6 +51,7 @@ var app = app || {};
 			this.$el.width(this.model.get("width") + "px");
 			this.$el.height(this.model.get("height") + "px");
 			this.$el.css("z-index", this.model.get("zIndex"));
+			this.$el.css("background-color", this.model.get("backgroundColor"));
 			
 			//TODO: The update then distorts what just has been typed
 			//this.$title.html(this.model.get("title"));

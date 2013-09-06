@@ -3,6 +3,31 @@ var app = app || {};
 (function ($) {
 	'use strict';
 
+	/*
+	 * http://www.colourlovers.com/palette/2370514/Remember_Dusk
+	 * http://www.colourlovers.com/palette/2806895/SimologyA
+	 * http://www.colourlovers.com/palette/2729584/lenabi_1LP
+	 */
+	var colors = [
+	    '#FFE032', /* paper note */
+	    '#F8ECC2', /* old paper */
+	    '#EDE3BB', /* edith */
+	    '#AF6816', /* reflection caramel */
+	    '#FF9900', /* vitamin c */
+	    '#FFCC00', /* bee */
+	    '#D8BC69', /* golden beige */
+	    '#E7D943', /* oker eye */
+	    '#E6F9BF', /* svetla zelena */
+	    '#BDDAB0', /* sweet day green */
+	    '#ACE3D6' /* sweet ice color */
+	];
+	
+	function randomColor() {
+		var randomIndex = (Math.random() * (colors.length - 1)).toFixed(0);
+		
+		return colors[randomIndex];
+	};
+	
 	app.AppView = Backbone.View.extend({
 
 		el: 'body',
@@ -66,7 +91,7 @@ var app = app || {};
 			var view = new app.NoteView({ model: note });
 			this.$container.append(view.render().el);
 		},
-
+		
 		createNote: function (e) {
 			console.log("app.AppView.createNote");
 			console.log("event", e);
@@ -77,6 +102,7 @@ var app = app || {};
 				contents: 'New contents',
 				left: e.pageX,
 				top: e.pageY,
+				backgroundColor: randomColor(),
 				zIndex: app.notes.maxZIndex() + 1
 			});
 		}
